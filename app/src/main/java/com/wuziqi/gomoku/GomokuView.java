@@ -394,7 +394,6 @@ public class GomokuView extends View {
         animRow = row; animCol = col; lastPlaceTime = System.currentTimeMillis();
         startTimer();
         invalidate();
-        postInvalidateDelayed(30); postInvalidateDelayed(80);
     }
 
     // ===== AI =====
@@ -467,7 +466,7 @@ public class GomokuView extends View {
             for (int i = 0; i < thinkingDots; i++) sb.append(".");
             listener.onStatusChanged("AI 思考中" + sb + "：" + getAiPieceName() + "　强度：" + getAiLevelName());
         }
-        postDelayed(new Runnable() { public void run() { scheduleDots(); } }, 500);
+        postDelayed(new Runnable() { public void run() { scheduleDots(); } }, 1000);
     }
 
     // ===== 状态通知 =====

@@ -121,7 +121,7 @@ public class AIPlayer {
     private int[] findBestMoveInternal(int[][] board, int moveCount) {
         java.util.ArrayList<int[]> candidates = new java.util.ArrayList<>(128);
         int bestScore = Integer.MIN_VALUE;
-        long deadline = System.nanoTime() + 500_000_000L;
+        long deadline = System.nanoTime() + 250_000_000L;
 
         for (int r = 0; r < GameEngine.BOARD_SIZE; r++) {
             for (int c = 0; c < GameEngine.BOARD_SIZE; c++) {
@@ -188,7 +188,7 @@ public class AIPlayer {
 
         // 生成候选列表
         java.util.ArrayList<int[]> candidates = new java.util.ArrayList<>();
-        long deadline = System.nanoTime() + 480_000_000L; // 480ms
+        long deadline = System.nanoTime() + 250_000_000L;
 
         for (int r = 0; r < GameEngine.BOARD_SIZE; r++) {
             for (int c = 0; c < GameEngine.BOARD_SIZE; c++) {
